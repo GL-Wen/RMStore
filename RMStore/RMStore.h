@@ -217,7 +217,7 @@ extern NSInteger const RMStoreErrorCodeUnableToCompleteVerification;
  @param failureBlock Called if the transaction failed verification. If verification could not be completed (e.g., due to connection issues), then error must be of code RMStoreErrorCodeUnableToCompleteVerification to prevent RMStore to finish the transaction. Must be called in the main queu.
  */
 - (void)verifyTransaction:(SKPaymentTransaction*)transaction
-                  success:(void (^)())successBlock
+                  success:(void (^)(void))successBlock
                   failure:(void (^)(NSError *error))failureBlock;
 
 @end
